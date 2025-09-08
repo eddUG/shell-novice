@@ -1,4 +1,5 @@
 ---
+layout: page
 title: "Introducing the Shell (Entomology Edition)"
 teaching: 15
 exercises: 45
