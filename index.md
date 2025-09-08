@@ -1,11 +1,10 @@
 ---
 layout: lesson
-title: "Shell Novice for Entomologists"
+title: "Shell Novice"
 ---
 
-Welcome to the **Shell Novice for Entomologists** lesson — a domain-adapted rewrite of the
-Software Carpentry Unix Shell lesson, grounded in insect trap surveys, mosquito genomics,
-specimen images, and field notes.
+Welcome to the **Shell Novice for vector research groups** lesson — a domain-adapted rewrite of the
+Software Carpentry Unix Shell lesson
 
-- 📦 Practice dataset: [Download](data/entomology-shell-lesson-data.txt)
+- 📦 Practice dataset: [Download](data/entomology-shell-lesson-data.zip)
 - 🧑‍🏫 Instructor Notes: [Guide](_extras/guide.md)
