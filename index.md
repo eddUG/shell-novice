@@ -3,45 +3,31 @@ layout: lesson
 title: "Shell Novice"
 ---
 
-Welcome to the **Shell Novice for vector research groups** lesson — a domain-adapted rewrite of the
-Software Carpentry Unix Shell lesson
-
-- 📦 Practice dataset: [Download](data/entomology-shell-lesson-data.zip)
-- 🧑‍🏫 Instructor Notes: [Guide](_extras/guide.md)
-
----
-layout: lesson
-root: .
----
-
 {% include gh_variables.html %}
 
-This workshop is an introduction to using unix shell. We can't cover every case 
-or give an exhaustive course on familiarization on unix shell in a few sessions. 
-Instead, this workshop is intended to give a basic introduction. Use of the shell 
-is fundamental to a wide range of advanced computing tasks. These lessons will 
-introduce you to this powerful tool
+Welcome to the **Shell Novice for vector research groups** lesson: a domain-adapted 
+rewrite of the Software Carpentry Unix Shell lesson. This workshop is an introduction to 
+using Unix Shell. We can't give an exhaustive course in a few sessions. Instead, we intend
+to give a basic introduction. Use of the shell is fundamental to a wide range of advanced 
+computing tasks. These lessons will introduce you to this powerful tool.
 
 > ## Prerequisites
 >
-> Command line experience is necessary for this lesson. We recommend the
-> participants to go through
-> [shell-novice](https://swcarpentry.github.io/shell-novice/), if new to the
-> command line (also known as terminal or shell).
 > This lesson guides you through the basics of file systems and the shell.
 > If you have stored files on a computer at all and recognize the word “file”
 > and either “directory” or “folder” (two common words for the same thing),
 > you’re ready for this lesson.
 {: .prereq}
 
-By the end of this workshop, students will know how to:
+By the end of the workshop, learners will be able to:
 
-* Identify problems a cluster can help solve
-* Use the UNIX shell (also known as terminal or command line) to
-  connect to a cluster.
-* Transfer files onto a cluster.
-* Submit and manage jobs on a cluster using a scheduler.
-* Observe the benefits and limitations of parallel execution.
+* Navigate the filesystem and manage files/folders safely.
+* Inspect and summarize text data using wildcards and quoting.
+* Build simple data pipelines with pipes and redirection to filter/aggregate records.
+* Automate repetitive work with loops and small shell scripts that accept arguments.
+* Find files and content across a project and capture results to new files.
+* Get help and troubleshoot.
+* Record and organize work for reproducibility.
 
 > ## Getting Started
 >
@@ -53,8 +39,5 @@ By the end of this workshop, students will know how to:
 > ## For Instructors
 >
 > If you are teaching this lesson in a workshop, please see the
-> [Guide](_extra/guide/).
-> [Instructor notes](guide/).
+> [Guide](guide/).
 {: .callout}
-
-{% include links.md %}
