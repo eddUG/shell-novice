@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Introducing the Shell (Entomology Edition)"
+title: "Introducing the Shell"
 teaching: 15
 exercises: 45
 questions:
@@ -39,9 +39,6 @@ Let’s get started.
 
 When the shell is first opened, you are presented with a prompt, indicating that the shell is waiting for input.
 
-```bash
-   $
-   ```
 ```
 {{ site.local.prompt }} $
 ```
@@ -52,9 +49,6 @@ The prompt might even include more than this. Do not worry if your prompt is not
 
 So let’s try our first command, ls, which is short for listing. This command will list the contents of the current directory:
 
-```bash
-   ls
-   ```
 ```
 {{ site.local.prompt }} $ ls
 ```
@@ -66,9 +60,6 @@ entomology-shell-lesson-data
 {: .language-bash}
 
 If the shell can’t find a program whose name is the command you typed, it will print an error message such as:
-```bash
-   ks
-   ```
 ```
 {{ site.local.prompt }} $ ks
 ```
