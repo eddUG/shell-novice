@@ -1,11 +1,10 @@
 ---
 layout: lesson
-title: "Shell Novice"
+title: "Introduction to Unix Shell"
+root: .
 ---
 
-{% include gh_variables.html %}
-
-Welcome to the **Shell Novice for vector research groups** lesson: a domain-adapted 
+Welcome to the Shell novice lessons for vector research groups: a domain-adapted 
 rewrite of the Software Carpentry Unix Shell lesson. This workshop is an introduction to 
 using Unix Shell. We can't give an exhaustive course in a few sessions. Instead, we intend
 to give a basic introduction. Use of the shell is fundamental to a wide range of advanced 
@@ -31,13 +30,11 @@ By the end of the workshop, learners will be able to:
 
 > ## Getting Started
 >
-> To get started, follow the directions in the "[Setup](
-> {{ page.root }}/setup.html)" tab to download data to your computer and follow
-> any installation instructions.
+> To get started, follow the directions in the "[Setup]({{ page.root }}/setup.html)"
+> tab to download data to your computer and follow any installation instructions.
 {: .callout}
 
 > ## For Instructors
 >
-> If you are teaching this lesson in a workshop, please see the
-> [Guide](guide/).
+> If you are teaching this lesson in a workshop, please see the [Guide](guide/).
 {: .callout}
