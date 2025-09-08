@@ -10,10 +10,10 @@ highlighter: rouge
 collections:
   episodes:
     output: true
-    permalink: /:path/
+    permalink: /:path/index.html
   extras:
     output: true
-    permalink: /:path/
+    permalink: /:path/index.html
 
 plugins:
   - jekyll-remote-theme
