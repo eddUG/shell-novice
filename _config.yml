@@ -1,9 +1,12 @@
 title: "Shell Novice"
 slug: "shell-novice"
 carpentry: "swc"
+
 remote_theme: carpentries/carpentries-theme
+
 markdown: kramdown
 highlighter: rouge
+
 collections:
   episodes:
     output: true
