@@ -1,7 +1,7 @@
-title: "Shell Novice for Entomologists"
-slug: "shell-novice-entomology"
+title: "Shell Novice"
+slug: "shell-novice"
 carpentry: "swc"
-remote_theme: carpentries/carpentries-theme@9.5.3
+remote_theme: carpentries/carpentries-theme
 markdown: kramdown
 highlighter: rouge
 collections:
@@ -11,3 +11,9 @@ collections:
   extras:
     output: true
     permalink: /:path/
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-redirect-from
+  - jekyll-paginate
