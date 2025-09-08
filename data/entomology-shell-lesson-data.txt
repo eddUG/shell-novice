@@ -1,0 +1,2 @@
+This is a placeholder for the entomology-shell-lesson-data.zip.
+Add the real dataset here.

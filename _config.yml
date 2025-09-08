@@ -1,0 +1,13 @@
+title: "Shell Novice for Entomologists"
+slug: "shell-novice-entomology"
+carpentry: "swc"
+remote_theme: carpentries/carpentries-theme@9.5.3
+markdown: kramdown
+highlighter: rouge
+collections:
+  episodes:
+    output: true
+    permalink: /:path/
+  extras:
+    output: true
+    permalink: /:path/
