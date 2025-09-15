@@ -15,6 +15,24 @@ collections:
     output: true
     permalink: /:path/index.html
 
+# Set the default layout for things in the episodes collection.
+defaults:
+  - values:
+      root: .
+      layout: page
+  - scope:
+      path: ""
+      type: episodes
+    values:
+      root: ..
+      layout: episode
+  - scope:
+      path: ""
+      type: extras
+    values:
+      root: ..
+      layout: page
+
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
