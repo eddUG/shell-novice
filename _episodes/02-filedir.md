@@ -27,20 +27,16 @@ keypoints:
 - "`.` on its own means 'the current directory'; `..` means 'the directory above the current one'."
 ---
 
-Instructor notes:
-
-Introducing and navigating the filesystem in the shell
-(covered in [Navigating Files and Directories](02-filedir.md) section)
-can be confusing. You may have both terminal and GUI file explorer
-open side by side so learners can see the content and file
-structure while they're using terminal to navigate the system.
+> ## For Instructors
+>
+> Introducing and navigating the filesystem in the shell can be confusing.
+> You may have both terminal and GUI file explorer open side by side
+> so learners can see the content and file structure while they're using terminal to navigate the system.
+{: .callout}
 
 The part of the operating system responsible for managing files and directories
-is called the **file system**.
-It organizes our data into files,
-which hold information,
-and directories (also called 'folders'),
-which hold files or other directories.
+is called the **file system**. It organizes our data into files, which hold information,
+and directories (also called 'folders'), which hold files or other directories.
 
 Several commands are frequently used to create, inspect, rename, and delete files and directories.
 To start exploring them, we'll go to our open shell window.
@@ -60,26 +56,26 @@ $ pwd
 /home/elukyamuzi
 ```
 
-Here,
-the computer's response is `/home/elukyamuzi`,
-which is elukyamuzi's **home directory**:
+Here, the computer's response is `/home/elukyamuzi`, which is elukyamuzi's **home directory**:
 
-## Home Directory Variation
-
-The home directory path will look different on different operating systems.
-On Mac, it may look like `/Users/elukyamuzi`,
-and on Windows, it will be similar to `C:\Documents and Settings\elukyamuzi` or
-`C:\Users\elukyamuzi`.
-(Note that it may look slightly different for different versions of Windows.)
-In future examples, we've used Linux output as the default - Mac and Windows
-output may differ slightly but should be generally similar.
-
-We will also assume that your `pwd` command returns your user's home directory.
-If `pwd` returns something different, you may need to navigate there using `cd`
-or some commands in this lesson will not work as written.
-See [Exploring Other Directories](#exploring-other-directories) for more details
-on the `cd` command.
-
+> ## Home Directory Variation
+>
+> Introducing and navigating the filesystem in the shell can be confusing.
+> You may have both terminal and GUI file explorer open side by side
+> so learners can see the content and file structure while they're using terminal to navigate the system.
+> The home directory path will look different on different operating systems.
+> On Mac, it may look like `/Users/elukyamuzi`, and on Windows, it will be similar
+> to `C:\Documents and Settings\elukyamuzi` or `C:\Users\elukyamuzi`.
+> (Note that it may look slightly different for different versions of Windows.)
+> In future examples, we've used Linux output as the default - Mac and Windows
+> output may differ slightly but should be generally similar.
+>
+> We will also assume that your `pwd` command returns your user's home directory.
+> If `pwd` returns something different, you may need to navigate there using `cd`
+> or some commands in this lesson will not work as written.
+> See [Exploring Other Directories](#exploring-other-directories) for more details
+> on the `cd` command.
+{: .callout}
 
 
 To understand what a 'home directory' is,
@@ -112,14 +108,14 @@ Similarly,
 we know that `/home` is stored inside the root directory `/`
 because its name begins with `/`.
 
-
-## Slashes
-
-Notice that there are two meanings for the `/` character.
-When it appears at the front of a file or directory name,
-it refers to the root directory. When it appears *inside* a path,
-it's just a separator.
-
+> ## Slashes
+>
+> Notice that there are two meanings for the `/` character.
+> When it appears at the front of a file or directory name,
+> it refers to the root directory. When it appears *inside* a path,
+> it's just a separator.
+> 
+{: .callout}
 
 
 Underneath `/home`,
@@ -177,14 +173,13 @@ we can see that the home directory contains only **sub-directories**.
 Any names in the output that don't have a classification symbol
 are **files** in the current working directory.
 
-
-## Clearing your terminal
-
-If your screen gets too cluttered, you can clear your terminal using the
-`clear` command. You can still access previous commands using <kbd>↑</kbd>
-and <kbd>↓</kbd> to move line-by-line, or by scrolling in your terminal.
-
-
+> ## Clearing your terminal
+>
+> If your screen gets too cluttered, you can clear your terminal using the
+> `clear` command. You can still access previous commands using <kbd>↑</kbd>
+> and <kbd>↓</kbd> to move line-by-line, or by scrolling in your terminal.
+> 
+{: .callout}
 
 ### Getting help
 
@@ -206,16 +201,15 @@ to use a command and what options it accepts ---
 
 We'll describe both ways next.
 
-
-## Help for built-in commands
-
-Some commands are built in to the Bash shell, rather than existing as separate
-programs on the filesystem. One example is the `cd` (change directory) command.
-If you get a message like `No manual entry for cd`, try `help cd` instead. The
-`help` command is how you get usage information for
-[Bash built-ins](https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html).
-
-
+> ## Help for built-in commands
+>
+> Some commands are built in to the Bash shell, rather than existing as separate
+> programs on the filesystem. One example is the `cd` (change directory) command.
+> If you get a message like `No manual entry for cd`, try `help cd` instead. The
+> `help` command is how you get usage information for
+> [Bash built-ins](https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html).
+> 
+{: .callout}
 
 #### The `--help` option
 
@@ -255,21 +249,21 @@ Mandatory arguments to long options are mandatory for short options, too.
 ...        ...        ...
 ```
 
+> ## When to use short or long options
+>
+> When options exist as both short and long options:
+> - Use the short option when typing commands directly into the
+>   shell to minimize keystrokes and get your task done faster.
+> - Use the long option in scripts to provide clarity.
+>   It will be read many times and typed once.
+> 
+{: .callout}
 
-### When to use short or long options
-When options exist as both short and long options:
-
-- Use the short option when typing commands directly into the
-   shell to minimize keystrokes and get your task done faster.
-- Use the long option in scripts to provide clarity.
-  It will be read many times and typed once.
-  
-
-## Unsupported command-line options
-
-If you try to use an option that is not supported, `ls` and other commands
-will usually print an error message similar to:
-
+> ## Unsupported command-line options
+>
+> If you try to use an option that is not supported, `ls` and other commands
+> will usually print an error message similar to:
+> 
 ```bash
 $ ls -j
 ```
@@ -278,6 +272,7 @@ $ ls -j
 ls: invalid option -- 'j'
 Try 'ls --help' for more information.
 ```
+{: .callout}
 
 
 #### The `man` command
@@ -302,18 +297,19 @@ If so, you can move between hits using <kbd>N</kbd> (for moving forward) and
 
 To **quit** the `man` pages, press <kbd>q</kbd>.
 
-
-## Manual pages on the web
-
-Of course, there is a third way to access help for commands:
-searching the internet via your web browser.
-When using internet search, including the phrase `unix man page` in your search
-query will help to find relevant results.
-
-GNU provides links to its
-[manuals](https://www.gnu.org/manual/manual.html) including the
-[core GNU utilities](https://www.gnu.org/software/coreutils/manual/coreutils.html),
-which covers many commands introduced within this lesson.
+> ## Manual pages on the web
+>
+> Of course, there is a third way to access help for commands:
+> searching the internet via your web browser.
+> When using internet search, including the phrase `unix man page` in your search
+> query will help to find relevant results.
+>
+> GNU provides links to its
+> [manuals](https://www.gnu.org/manual/manual.html) including the
+> [core GNU utilities](https://www.gnu.org/software/coreutils/manual/coreutils.html),
+> which covers many commands introduced within this lesson.
+> 
+{: .callout}
 
 ## Challenge 1
 
@@ -515,17 +511,17 @@ Note that in most command line tools, multiple options can be combined
 with a single `-` and no spaces between the options; `ls -F -a` is
 equivalent to `ls -Fa`.
 
-
-## Other Hidden Files
-
-In addition to the hidden directories `..` and `.`, you may also see a file
-called `.bash_profile`. This file usually contains shell configuration
-settings. You may also see other files and directories beginning
-with `.`. These are usually files and directories that are used to configure
-different programs on your computer. The prefix `.` is used to prevent these
-configuration files from cluttering the terminal when a standard `ls` command
-is used.
-
+> ## Other Hidden Files
+>
+> In addition to the hidden directories `..` and `.`, you may also see a file
+> called `.bash_profile`. This file usually contains shell configuration
+> settings. You may also see other files and directories beginning
+> with `.`. These are usually files and directories that are used to configure
+> different programs on your computer. The prefix `.` is used to prevent these
+> configuration files from cluttering the terminal when a standard `ls` command
+> is used.
+> 
+{: .callout}
 
 These three commands are the basic commands for navigating the filesystem on your computer:
 `pwd`, `ls`, and `cd`. Let's explore some variations on those commands. What happens
@@ -593,44 +589,39 @@ $ cd /home/elukyamuzi/shell-lesson-data
 
 Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 
-
-## Two More Shortcuts
-
-The shell interprets a tilde (`~`) character at the start of a path to
-mean "the current user's home directory". For example, if elukyamuzi's home
-directory is `/home/elukyamuzi`, then `~/data` is equivalent to
-`/home/elukyamuzi/data`. This only works if it is the first character in the
-path; `here/there/~/elsewhere` is *not* `here/there/home/elukyamuzi/elsewhere`.
-
-Another shortcut is the `-` (dash) character. `cd` will translate `-` into
-*the previous directory I was in*, which is faster than having to remember,
-then type, the full path.  This is a *very* efficient way of moving
-*back and forth between two directories* -- i.e. if you execute `cd -` twice,
-you end up back in the starting directory.
-
-The difference between `cd ..` and `cd -` is
-that the former brings you *up*, while the latter brings you *back*.
-
-***
-
-Try it!
-First navigate to `~/shell-lesson-data` (you should already be there).
+> ## Two More Shortcuts
+>
+> The shell interprets a tilde (`~`) character at the start of a path to
+> mean "the current user's home directory". For example, if elukyamuzi's home
+> directory is `/home/elukyamuzi`, then `~/data` is equivalent to
+> `/home/elukyamuzi/data`. This only works if it is the first character in the
+> path; `here/there/~/elsewhere` is *not* `here/there/home/elukyamuzi/elsewhere`.
+>
+> Another shortcut is the `-` (dash) character. `cd` will translate `-` into
+> *the previous directory I was in*, which is faster than having to remember,
+> then type, the full path.  This is a *very* efficient way of moving
+> *back and forth between two directories* -- i.e. if you execute `cd -` twice,
+> you end up back in the starting directory.
+>
+> The difference between `cd ..` and `cd -` is
+> that the former brings you *up*, while the latter brings you *back*.
+>
+> Try it! First navigate to `~/shell-lesson-data` (you should already be there).
 
 ```bash
 $ cd ~/shell-lesson-data
 ```
-
-Then `cd` into the `exercise-data/creatures` directory
+> Then `cd` into the `exercise-data/creatures` directory
 
 ```bash
 $ cd exercise-data/creatures
 ```
-
-Now if you run
+> Now if you run
 
 ```bash
 $ cd -
 ```
+{: .callout}
 
 you'll see you're back in `~/shell-lesson-data`.
 Run `cd -` again and you're back in `~/shell-lesson-data/exercise-data/creatures`
