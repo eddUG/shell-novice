@@ -42,21 +42,12 @@ When the shell is first opened, you are presented with a prompt, indicating that
 $ 
 ```
 
-```
-{{ site.local.prompt }} $
-```
-{: .language-bash}
-
 The prompt might even include more than this. Do not worry if your prompt is not just a short $. This lesson does not depend on this additional information and it should also not get in your way. The only important item to focus on is the $ character itself and we will see later why.
 
 So let’s try our first command, ls, which is short for listing. This command will list the contents of the current directory:
 
 ```bash
 $ ls
-```
-
-```output
-shell-lesson-data
 ```
 
 ```
@@ -68,10 +59,6 @@ If the shell can’t find a program whose name is the command you typed, it will
 
 ```bash
 $ ks
-```
-
-```output
-ks: command not found
 ```
 
 ```
