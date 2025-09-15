@@ -1,8 +1,7 @@
 ---
-layout: page
 title: "Introducing the Shell"
-teaching: 15
-exercises: 45
+teaching: 40
+exercises: 10
 questions:
 - "What is the shell?"
 - "What is a command shell"
@@ -18,8 +17,8 @@ keypoints:
 - "A significant challenge when using the shell can be knowing what commands need to be run and how to run them."
 ---
 
-> This episode adapts the classic Software Carpentry *Shell Novice* introduction for a vector research audience.
-> We'll use a small, synthetic project with trap CSVs, mosquito FASTQ files and specimen images.
+This episode adapts the classic Software Carpentry *Shell Novice* introduction for a vector research audience.
+We'll use a small, synthetic project with trap CSVs, mosquito FASTQ files and specimen images.
 
 ## Background
 Humans and computers commonly interact in many different ways, such as through a keyboard and mouse, touch screen interfaces, or using speech recognition systems. The most widely used way to interact with personal computers is called a graphical user interface (GUI). With a GUI, we give instructions by clicking a mouse and using menu-driven interactions.
@@ -39,37 +38,31 @@ Let’s get started.
 
 When the shell is first opened, you are presented with a prompt, indicating that the shell is waiting for input.
 
+```bash
+$ 
 ```
-{{ site.local.prompt }} $
-```
-{: .language-bash}
-
 
 The prompt might even include more than this. Do not worry if your prompt is not just a short $. This lesson does not depend on this additional information and it should also not get in your way. The only important item to focus on is the $ character itself and we will see later why.
 
 So let’s try our first command, ls, which is short for listing. This command will list the contents of the current directory:
 
+```bash
+$ ls
 ```
-{{ site.local.prompt }} $ ls
-```
-{: .language-bash}
 
-```
+```output
 entomology-shell-lesson-data
 ```
-{: .language-bash}
 
 If the shell can’t find a program whose name is the command you typed, it will print an error message such as:
-```
-{{ site.local.prompt }} $ ks
-```
-{: .language-bash}
 
+```bash
+$ ks
 ```
+
+```output
 ks: command not found
 ```
-{: .language-bash}
-
 
 This might happen if the command was mis-typed or if the program corresponding to that command is not installed.
 
