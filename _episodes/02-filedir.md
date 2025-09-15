@@ -272,8 +272,8 @@ Mandatory arguments to long options are mandatory for short options, too.
 > ```
 >
 > ```
-> Applications/ Documents/    Library/      Music/        Public/
-> Desktop/      Downloads/    Movies/       Pictures/
+> ls: invalid option -- 'j'
+Try 'ls --help' for more information.
 > ```
 > {: .error}
 {: .callout}
@@ -353,7 +353,6 @@ To **quit** the `man` pages, press <kbd>q</kbd>.
 > > checking to see if a new output file was written.
 > {: .solution}
 {: .challenge}
-> > 
 
 ### Exploring Other Directories
 
@@ -686,7 +685,6 @@ Run `cd -` again and you're back in `~/shell-lesson-data/exercise-data/creatures
 >
 > ![](fig/filesystem-challenge.svg){alt='A directory tree below the Users directory where "/home" contains the directories "backup" and "thing"; "/home/backup" contains "original","pnas\_final" and "pnas\_sub"; "/home/thing" contains "backup"; and"/home/thing/backup" contains "2012-12-01", "2013-01-08" and"2013-01-27"'}
 > 
-
 > > ## Solution
 > >
 > > 1. No: there *is* a directory `backup` in `/Users`.
@@ -708,14 +706,14 @@ Run `cd -` again and you're back in `~/shell-lesson-data/exercise-data/creatures
 > ```
 > pnas_sub/ pnas_final/ original/
 > ```
-{: .output}
+> {: .output}
 > 
 > ![](fig/filesystem-challenge.svg){alt='A directory tree below the Users directory where "/home" contains the directories "backup" and "thing"; "/home/backup" contains "original","pnas\_final" and "pnas\_sub"; "/home/thing" contains "backup"; and"/home/thing/backup" contains "2012-12-01", "2013-01-08" and"2013-01-27"'}
 >
 > 1. `ls pwd`
 > 2. `ls -r -F`
 > 3. `ls -r -F /home/backup
-
+>    
 > > ## Solution
 > >
 > > 1. No: `pwd` is not the name of a directory.
