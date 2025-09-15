@@ -20,7 +20,7 @@ keypoints:
 - "`ls [path]` prints a listing of a specific file or directory; `ls` on its own lists the current working directory."
 - "`cd [path]` changes the current working directory."
 - "Most commands take options that begin with a single `-`."
-- "Directory names in a path are separated with `/` on Unix, but '\' on Windows."
+- "Directory names in a path are separated with `/` on Unix, but \ on Windows."
 - "`/` on its own is the root directory of the whole file system."
 - "An absolute path specifies a location from the root of the file system."
 - "A relative path specifies a location starting from the current location."
