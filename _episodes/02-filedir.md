@@ -1,8 +1,7 @@
 ---
-layout: page
 title: "Navigating files and directories"
 teaching: 40
-exercises: 15
+exercises: 10
 questions:
 - "How can I move around on my computer?"
 - "How can I see what files and directories I have?"
@@ -21,15 +20,13 @@ keypoints:
 - "A significant challenge when using the shell can be knowing what commands need to be run and how to run them."
 ---
 
-:::::::::::::::::::::::::::::::::::::::: instructor
+Instructor notes:
 
 Introducing and navigating the filesystem in the shell
 (covered in [Navigating Files and Directories](02-filedir.md) section)
 can be confusing. You may have both terminal and GUI file explorer
 open side by side so learners can see the content and file
 structure while they're using terminal to navigate the system.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 The part of the operating system responsible for managing files and directories
 is called the **file system**.
@@ -60,8 +57,6 @@ Here,
 the computer's response is `/home/elukyamuzi`,
 which is elukyamuzi's **home directory**:
 
-:::::::::::::::::::::::::::::::::::::::::  callout
-
 ## Home Directory Variation
 
 The home directory path will look different on different operating systems.
@@ -79,7 +74,6 @@ See [Exploring Other Directories](#exploring-other-directories) for more details
 on the `cd` command.
 
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 To understand what a 'home directory' is,
 let's have a look at how the file system as a whole is organized.  For the
@@ -111,7 +105,6 @@ Similarly,
 we know that `/home` is stored inside the root directory `/`
 because its name begins with `/`.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Slashes
 
@@ -121,7 +114,6 @@ it refers to the root directory. When it appears *inside* a path,
 it's just a separator.
 
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Underneath `/home`,
 we find one directory for each user with an account on this machine,
@@ -178,7 +170,6 @@ we can see that the home directory contains only **sub-directories**.
 Any names in the output that don't have a classification symbol
 are **files** in the current working directory.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Clearing your terminal
 
@@ -187,7 +178,6 @@ If your screen gets too cluttered, you can clear your terminal using the
 and <kbd>↓</kbd> to move line-by-line, or by scrolling in your terminal.
 
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Getting help
 
@@ -209,7 +199,6 @@ to use a command and what options it accepts ---
 
 We'll describe both ways next.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Help for built-in commands
 
@@ -220,7 +209,6 @@ If you get a message like `No manual entry for cd`, try `help cd` instead. The
 [Bash built-ins](https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html).
 
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 #### The `--help` option
 
@@ -260,7 +248,6 @@ Mandatory arguments to long options are mandatory for short options, too.
 ...        ...        ...
 ```
 
-:::::::::::::::::::::::::::::::::::::::::  callout
 
 ### When to use short or long options
 When options exist as both short and long options:
@@ -270,9 +257,6 @@ When options exist as both short and long options:
 - Use the long option in scripts to provide clarity.
   It will be read many times and typed once.
   
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Unsupported command-line options
 
@@ -288,7 +272,6 @@ ls: invalid option -- 'j'
 Try 'ls --help' for more information.
 ```
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 #### The `man` command
 
@@ -312,7 +295,6 @@ If so, you can move between hits using <kbd>N</kbd> (for moving forward) and
 
 To **quit** the `man` pages, press <kbd>q</kbd>.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Manual pages on the web
 
@@ -326,10 +308,27 @@ GNU provides links to its
 [core GNU utilities](https://www.gnu.org/software/coreutils/manual/coreutils.html),
 which covers many commands introduced within this lesson.
 
+> ##  Exploring More `ls` Options
+>
+> Open a second terminal window on your local computer and run the `ls` command
+> (without logging in to {{ site.remote.name }}). What differences do you see?
+> You can also use two options at the same time. What does the command `ls` do when used
+> with the `-l` option? What about if you use both the `-l` and the `-h` option?
+>
+> Some of its output is about properties that we do not cover in this lesson (such
+> as file permissions and ownership), but the rest should be useful nevertheless.
+>
+> > ## Solution
+> >
+> > The `-l` option makes `ls` use a **l**ong listing format, showing not only
+> > the file/directory names but also additional information, such as the file size
+> > and the time of its last modification. If you use both the `-h` option and the `-l` option,
+> > this makes the file size '**h**uman readable', i.e. displaying something like `5.3K`
+> > instead of `5369`.
+> {: .solution}
+{: .challenge}
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
+## Challenge
 
 ## Exploring More `ls` Options
 
@@ -340,7 +339,7 @@ Some of its output is about properties that we do not cover in this lesson (such
 as file permissions and ownership), but the rest should be useful
 nevertheless.
 
-:::::::::::::::  solution
+## solution
 
 ## Solution
 
@@ -352,11 +351,7 @@ instead of `5369`.
 
 
 
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
+## challenge
 
 ## Listing in Reverse Chronological Order
 
@@ -368,7 +363,7 @@ Which file is displayed last when you combine the `-t` and `-r` options?
 Hint: You may need to use the `-l` option to see the
 last changed dates.
 
-:::::::::::::::  solution
+## solution
 
 ## Solution
 
@@ -377,10 +372,6 @@ can be very useful for finding your most recent edits or checking to
 see if a new output file was written.
 
 
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Exploring Other Directories
 
@@ -542,7 +533,6 @@ Note that in most command line tools, multiple options can be combined
 with a single `-` and no spaces between the options; `ls -F -a` is
 equivalent to `ls -Fa`.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Other Hidden Files
 
@@ -554,8 +544,6 @@ different programs on your computer. The prefix `.` is used to prevent these
 configuration files from cluttering the terminal when a standard `ls` command
 is used.
 
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 These three commands are the basic commands for navigating the filesystem on your computer:
 `pwd`, `ls`, and `cd`. Let's explore some variations on those commands. What happens
@@ -623,7 +611,6 @@ $ cd /home/elukyamuzi/shell-lesson-data
 
 Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Two More Shortcuts
 
@@ -667,9 +654,7 @@ you'll see you're back in `~/shell-lesson-data`.
 Run `cd -` again and you're back in `~/shell-lesson-data/exercise-data/creatures`
 
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
+## challenge
 
 ## Absolute vs Relative Paths
 
