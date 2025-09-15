@@ -13,11 +13,18 @@ objectives:
 - "Use options and arguments to change the behaviour of a shell command."
 - "Demonstrate the use of tab completion and explain its advantages."
 keypoints:
-- "A shell is a program whose primary purpose is to read commands and run other programs."
-- "This lesson uses Bash, the default shell in many implementations of Unix."
-- "Programs can be run in Bash by entering commands at the command-line prompt."
-- "The shell’s main advantages are its high action-to-keystroke ratio, its support for automating repetitive tasks, and its capacity to access networked machines."
-- "A significant challenge when using the shell can be knowing what commands need to be run and how to run them."
+- "The file system is responsible for managing information on the disk."
+- "Information is stored in files, which are stored in directories (folders)."
+- "Directories can also store other directories, which then form a directory tree."
+- "`pwd` prints the user's current working directory."
+- "`ls [path]` prints a listing of a specific file or directory; `ls` on its own lists the current working directory."
+- "`cd [path]` changes the current working directory."
+- "Most commands take options that begin with a single `-`."
+- "Directory names in a path are separated with `/` on Unix, but `\` on Windows."
+- "`/` on its own is the root directory of the whole file system."
+- "An absolute path specifies a location from the root of the file system."
+- "A relative path specifies a location starting from the current location."
+- "`.` on its own means 'the current directory'; `..` means 'the directory above the current one'."
 ---
 
 Instructor notes:
@@ -308,10 +315,10 @@ GNU provides links to its
 [core GNU utilities](https://www.gnu.org/software/coreutils/manual/coreutils.html),
 which covers many commands introduced within this lesson.
 
+## Challenge 1
+
 > ##  Exploring More `ls` Options
 >
-> Open a second terminal window on your local computer and run the `ls` command
-> (without logging in to {{ site.remote.name }}). What differences do you see?
 > You can also use two options at the same time. What does the command `ls` do when used
 > with the `-l` option? What about if you use both the `-l` and the `-h` option?
 >
@@ -328,50 +335,25 @@ which covers many commands introduced within this lesson.
 > {: .solution}
 {: .challenge}
 
-## Challenge
+## Challenge 2
 
-## Exploring More `ls` Options
-
-You can also use two options at the same time. What does the command `ls` do when used
-with the `-l` option? What about if you use both the `-l` and the `-h` option?
-
-Some of its output is about properties that we do not cover in this lesson (such
-as file permissions and ownership), but the rest should be useful
-nevertheless.
-
-## solution
-
-## Solution
-
-The `-l` option makes `ls` use a **l**ong listing format, showing not only
-the file/directory names but also additional information, such as the file size
-and the time of its last modification. If you use both the `-h` option and the `-l` option,
-this makes the file size '**h**uman readable', i.e. displaying something like `5.3K`
-instead of `5369`.
-
-
-
-## challenge
-
-## Listing in Reverse Chronological Order
-
-By default, `ls` lists the contents of a directory in alphabetical
-order by name. The command `ls -t` lists items by time of last
-change instead of alphabetically. The command `ls -r` lists the
-contents of a directory in reverse order.
-Which file is displayed last when you combine the `-t` and `-r` options?
-Hint: You may need to use the `-l` option to see the
-last changed dates.
-
-## solution
-
-## Solution
-
-The most recently changed file is listed last when using `-rt`. This
-can be very useful for finding your most recent edits or checking to
-see if a new output file was written.
-
-
+> ## Listing in Reverse Chronological Order
+>
+> By default, `ls` lists the contents of a directory in alphabetical
+> order by name. The command `ls -t` lists items by time of last
+> change instead of alphabetically. The command `ls -r` lists the
+> contents of a directory in reverse order.
+> Which file is displayed last when you combine the `-t` and `-r` options?
+> Hint: You may need to use the `-l` option to see the last changed dates.
+>
+> > ## Solution
+> >
+> > The most recently changed file is listed last when using `-rt`.
+> > This can be very useful for finding your most recent edits or
+> > checking to see if a new output file was written.
+> {: .solution}
+{: .challenge}
+> > 
 
 ### Exploring Other Directories
 
@@ -653,110 +635,90 @@ $ cd -
 you'll see you're back in `~/shell-lesson-data`.
 Run `cd -` again and you're back in `~/shell-lesson-data/exercise-data/creatures`
 
+## Challenge 3
 
-## challenge
+> ##  Absolute vs Relative Paths
+>
+> Starting from `/home/elukyamuzi/data`,
+> which of the following commands could elukyamuzi use to navigate to his home directory,
+> which is `/home/elukyamuzi`?
+> 
+> 1. `cd .`
+> 2. `cd /`
+> 3. `cd /home/nelle`
+> 4. `cd ../..`
+> 5. `cd ~`
+> 6. `cd home`
+> 7. `cd ~/data/..`
+> 8. `cd`
+> 9. `cd ..`
+>
+> > ## Solution
+> >
+> > 1. No: `.` stands for the current directory.
+> > 2. No: `/` stands for the root directory.
+> > 3. No: elukyamuzi's home directory is `/home/elukyamuzi`.
+> > 4. No: this command goes up two levels, i.e. ends in `/home`.
+> > 5. Yes: `~` stands for the user's home directory, in this case `/home/elukyamuzi`.
+> > 6. No: this command would navigate into a directory `home` in the current directory if it exists.
+> > 7. Yes: unnecessarily complicated, but correct.
+> > 8. Yes: shortcut to go back to the user's home directory.
+> > 9. Yes: goes up one level.
+> > 
+> {: .solution}
+{: .challenge}
 
-## Absolute vs Relative Paths
 
-Starting from `/home/elukyamuzi/data`,
-which of the following commands could elukyamuzi use to navigate to his home directory,
-which is `/home/elukyamuzi`?
+## Challenge 4
 
-1. `cd .`
-2. `cd /`
-3. `cd /home/nelle`
-4. `cd ../..`
-5. `cd ~`
-6. `cd home`
-7. `cd ~/data/..`
-8. `cd`
-9. `cd ..`
+> ##  Relative Path Resolution
+>
+> Using the filesystem diagram below, if `pwd` displays `/home/thing`,
+> what will `ls -F ../backup` display?
+> 1. `../backup: No such file or directory`
+> 2. `2012-12-01 2013-01-08 2013-01-27`
+> 3. `2012-12-01/ 2013-01-08/ 2013-01-27/`
+> 4. `original/ pnas_final/ pnas_sub/`
+>
+> ![](fig/filesystem-challenge.svg){alt='A directory tree below the Users directory where "/home" contains the directories "backup" and "thing"; "/home/backup" contains "original","pnas\_final" and "pnas\_sub"; "/home/thing" contains "backup"; and"/home/thing/backup" contains "2012-12-01", "2013-01-08" and"2013-01-27"'}
+> 
 
-:::::::::::::::  solution
+> > ## Solution
+> >
+> > 1. No: there *is* a directory `backup` in `/Users`.
+> > 2. No: this is the content of `Users/thing/backup`, but with `..`, we asked for one level further up.
+> > 3. No: see previous explanation.
+> > 4. Yes: `../backup/` refers to `/home/backup/`.
+> >    
+> {: .solution}
+{: .challenge}
 
-## Solution
+## Challenge 5
 
-1. No: `.` stands for the current directory.
-2. No: `/` stands for the root directory.
-3. No: elukyamuzi's home directory is `/home/elukyamuzi`.
-4. No: this command goes up two levels, i.e. ends in `/home`.
-5. Yes: `~` stands for the user's home directory, in this case `/home/elukyamuzi`.
-6. No: this command would navigate into a directory `home` in the current directory
-  if it exists.
-7. Yes: unnecessarily complicated, but correct.
-8. Yes: shortcut to go back to the user's home directory.
-9. Yes: goes up one level.
+> ## `ls` Reading Comprehension
+>
+> Using the filesystem diagram below, if `pwd` displays `/home/backup`,
+> and `-r` tells `ls` to display things in reverse order,
+> what command(s) will result in the following output:
+>
+> ```output
+> pnas_sub/ pnas_final/ original/
+> ```
+> 
+> ![](fig/filesystem-challenge.svg){alt='A directory tree below the Users directory where "/home" contains the directories "backup" and "thing"; "/home/backup" contains "original","pnas\_final" and "pnas\_sub"; "/home/thing" contains "backup"; and"/home/thing/backup" contains "2012-12-01", "2013-01-08" and"2013-01-27"'}
+>
+> 1. `ls pwd`
+> 2. `ls -r -F`
+> 3. `ls -r -F /home/backup
+
+> > ## Solution
+> >
+> > 1. No: `pwd` is not the name of a directory.
+> > 2. Yes: `ls` without directory argument lists files and directories in the current directory.
+> > 3. Yes: uses the absolute path explicitly.
+> {: .solution}
+{: .challenge}
   
-  
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## Relative Path Resolution
-
-Using the filesystem diagram below, if `pwd` displays `/home/thing`,
-what will `ls -F ../backup` display?
-
-1. `../backup: No such file or directory`
-2. `2012-12-01 2013-01-08 2013-01-27`
-3. `2012-12-01/ 2013-01-08/ 2013-01-27/`
-4. `original/ pnas_final/ pnas_sub/`
-
-![](fig/filesystem-challenge.svg){alt='A directory tree below the Users directory where "/home" contains the directories "backup" and "thing"; "/home/backup" contains "original","pnas\_final" and "pnas\_sub"; "/home/thing" contains "backup"; and"/home/thing/backup" contains "2012-12-01", "2013-01-08" and"2013-01-27"'}
-
-:::::::::::::::  solution
-
-## Solution
-
-1. No: there *is* a directory `backup` in `/Users`.
-2. No: this is the content of `Users/thing/backup`,
-  but with `..`, we asked for one level further up.
-3. No: see previous explanation.
-4. Yes: `../backup/` refers to `/home/backup/`.
-  
-  
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## `ls` Reading Comprehension
-
-Using the filesystem diagram below,
-if `pwd` displays `/home/backup`,
-and `-r` tells `ls` to display things in reverse order,
-what command(s) will result in the following output:
-
-```output
-pnas_sub/ pnas_final/ original/
-```
-
-![](fig/filesystem-challenge.svg){alt='A directory tree below the Users directory where "/home" contains the directories "backup" and "thing"; "/home/backup" contains "original","pnas\_final" and "pnas\_sub"; "/home/thing" contains "backup"; and"/home/thing/backup" contains "2012-12-01", "2013-01-08" and"2013-01-27"'}
-
-1. `ls pwd`
-2. `ls -r -F`
-3. `ls -r -F /home/backup`
-
-:::::::::::::::  solution
-
-## Solution
-
-1. No: `pwd` is not the name of a directory.
-2. Yes: `ls` without directory argument lists files and directories
-  in the current directory.
-3. Yes: uses the absolute path explicitly.
-  
-  
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
 ## General Syntax of a Shell Command
 
 We have now encountered commands, options, and arguments,
@@ -896,21 +858,4 @@ and we will see it in many other tools as we go on.
 
 [Arguments]: https://swcarpentry.github.io/shell-novice/reference.html#argument
 
-
-:::::::::::::::::::::::::::::::::::::::: keypoints
-
-- The file system is responsible for managing information on the disk.
-- Information is stored in files, which are stored in directories (folders).
-- Directories can also store other directories, which then form a directory tree.
-- `pwd` prints the user's current working directory.
-- `ls [path]` prints a listing of a specific file or directory; `ls` on its own lists the current working directory.
-- `cd [path]` changes the current working directory.
-- Most commands take options that begin with a single `-`.
-- Directory names in a path are separated with `/` on Unix, but `\` on Windows.
-- `/` on its own is the root directory of the whole file system.
-- An absolute path specifies a location from the root of the file system.
-- A relative path specifies a location starting from the current location.
-- `.` on its own means 'the current directory'; `..` means 'the directory above the current one'.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
