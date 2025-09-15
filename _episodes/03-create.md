@@ -34,9 +34,11 @@ which we can check using:
 $ pwd
 ```
 
-```output
+```
 /home/elukyamuzi/shell-lesson-data
 ```
+{: .output}
+
 
 Next we'll move to the `exercise-data/writing` directory and see what it contains:
 
@@ -45,9 +47,11 @@ $ cd exercise-data/writing/
 $ ls -F
 ```
 
-```output
+```
 haiku.txt  LittleWomen.txt
 ```
+{: .output}
+
 
 ### Create a directory
 
@@ -68,9 +72,10 @@ the new directory is created in the current working directory:
 $ ls -F
 ```
 
-```output
+```
 haiku.txt  LittleWomen.txt  thesis/
 ```
+{: .output}
 
 Since we've just created the `thesis` directory, there's nothing in it yet:
 
@@ -94,7 +99,7 @@ Let's use `ls -FR` to recursively list the new directory hierarchy we just creat
 $ ls -FR ../project
 ```
 
-```output
+```
 ../project/:
 data/  results/
 
@@ -102,69 +107,71 @@ data/  results/
 
 ../project/results:
 ```
+{: .output}
 
-:::::::::::::::::::::::::::::::::::::::::  callout
+> ## Two ways of doing the same thing
+>
+> Using the shell to create a directory is no different than using a file explorer.
+> If you open the current directory using your operating system's graphical file explorer,
+> the `thesis` directory will appear there too.
+> While the shell and the file explorer are two different ways of interacting with the files,
+> the files and directories themselves are the same.
+> 
+{: .callout}
 
-## Two ways of doing the same thing
+> ##  Good names for files and directories
+>
+> Using the shell to create a directory is no different than using a file explorer.
+> If you open the current directory using your operating system's graphical file explorer,
+> the `thesis` directory will appear there too.
+> While the shell and the file explorer are two different ways of interacting with the files,
+> the files and directories themselves are the same.
+>
+> Complicated names of files and directories can make your life painful
+> when working on the command line. Here we provide a few useful
+> tips for the names of your files and directories.
+>
+> 1. Don't use spaces.
+>
+> Spaces can make a name more meaningful,
+> but since spaces are used to separate arguments on the command line
+> it is better to avoid them in names of files and directories.
+> You can use `-` or `_` instead (e.g. `north-pacific-gyre/` rather than `north pacific gyre/`).
+> To test this out, try typing `mkdir north pacific gyre` and see what directory (or directories!)
+> are made when you check with `ls -F`.
+>
+> 2. Don't begin the name with `-` (dash).
+>   
+> Commands treat names starting with `-` as options.
+>
+> 3. Stick with lowercase letters, numbers, `.` (period or 'full stop'), `-` (dash) and `_` (underscore).
+>
+> Many other characters have special meanings on the command line.
+> We will learn about some of these during this lesson.
+> There are special characters that can cause your command to not work as
+> expected and can even result in data loss.
+>
+> If you need to refer to names of files or directories that have spaces
+> or other special characters, you should surround the name in single
+> [quotes](https://www.gnu.org/software/bash/manual/html_node/Quoting.html) (`''`).
+>
+> It is often good practice
+> to use all lowercase letters in names of files and directories;
+> Windows and macOS file systems are typically case insensitive
+> and therefore unable to distinguish between
+> `thesis` and `Thesis` in the same directory.
+> 
+{: .callout}
 
-Using the shell to create a directory is no different than using a file explorer.
-If you open the current directory using your operating system's graphical file explorer,
-the `thesis` directory will appear there too.
-While the shell and the file explorer are two different ways of interacting with the files,
-the files and directories themselves are the same.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::  callout
-
-## Good names for files and directories
-
-Complicated names of files and directories can make your life painful
-when working on the command line. Here we provide a few useful
-tips for the names of your files and directories.
-
-1. Don't use spaces.
-
-Spaces can make a name more meaningful,
-but since spaces are used to separate arguments on the command line
-it is better to avoid them in names of files and directories.
-You can use `-` or `_` instead (e.g. `north-pacific-gyre/` rather than `north pacific gyre/`).
-To test this out, try typing `mkdir north pacific gyre` and see what directory (or directories!)
-are made when you check with `ls -F`.
-
-2. Don't begin the name with `-` (dash).
-
-Commands treat names starting with `-` as options.
-
-3. Stick with lowercase letters, numbers, `.` (period or 'full stop'), `-` (dash) and `_` (underscore).
-
-Many other characters have special meanings on the command line.
-We will learn about some of these during this lesson.
-There are special characters that can cause your command to not work as
-expected and can even result in data loss.
-
-If you need to refer to names of files or directories that have spaces
-or other special characters, you should surround the name in single
-[quotes](https://www.gnu.org/software/bash/manual/html_node/Quoting.html) (`''`).
-
-It is often good practice
-to use all lowercase letters in names of files and directories;
-Windows and macOS file systems are typically case insensitive
-and therefore unable to distinguish between
-`thesis` and `Thesis` in the same directory.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::  instructor
-
-Learners can sometimes get trapped within command-line text editors
-such as Vim, Emacs, or Nano. Closing the terminal emulator and opening
-a new one can be frustrating as learners will have to navigate to the
-correct folder again. Our recommendation to mitigate this problem is that
-instructors should use the same text editor as the learners during workshops
-(in most cases Nano).
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
+> ## Instructor note
+>
+> Learners can sometimes get trapped within command-line text editors
+> such as Vim, Emacs, or Nano. Closing the terminal emulator and opening
+> a new one can be frustrating as learners will have to navigate to the
+> correct folder again. Our recommendation to mitigate this problem is that
+> instructors should use the same text editor as the learners during workshops
+> (in most cases Nano).
+{: .callout}
 
 ### Create a text file
 
@@ -176,32 +183,30 @@ $ cd thesis
 $ nano draft.txt
 ```
 
-:::::::::::::::::::::::::::::::::::::::::  callout
+> ## Which Editor?
+>
+> When we say, '`nano` is a text editor' we really do mean 'text'. It can
+> only work with plain character data, not tables, images, or any other
+> human-friendly media. We use it in examples because it is one of the
+> least complex text editors. However, because of this trait, it may
+> not be powerful enough or flexible enough for the work you need to do
+> after this workshop. On Unix systems (such as Linux and macOS),
+> many programmers use [Emacs](https://www.gnu.org/software/emacs/) or
+> [Vim](https://www.vim.org/) (both of which require more time to learn),
+> or a graphical editor such as [Gedit](https://projects.gnome.org/gedit/)
+> or [VScode](https://code.visualstudio.com/). On Windows, you may wish to
+> use [Notepad++](https://notepad-plus-plus.org/).  Windows also has a built-in
+> editor called `notepad` that can be run from the command line in the same
+> way as `nano` for the purposes of this lesson.
+>
+> No matter what editor you use, you will need to know where it searches
+> for and saves files. If you start it from the shell, it will (probably)
+> use your current working directory as its default location. If you use
+> your computer's start menu, it may want to save files in your Desktop or
+> Documents directory instead. You can change this by navigating to
+> another directory the first time you 'Save As...'
+{: .callout}
 
-## Which Editor?
-
-When we say, '`nano` is a text editor' we really do mean 'text'. It can
-only work with plain character data, not tables, images, or any other
-human-friendly media. We use it in examples because it is one of the
-least complex text editors. However, because of this trait, it may
-not be powerful enough or flexible enough for the work you need to do
-after this workshop. On Unix systems (such as Linux and macOS),
-many programmers use [Emacs](https://www.gnu.org/software/emacs/) or
-[Vim](https://www.vim.org/) (both of which require more time to learn),
-or a graphical editor such as [Gedit](https://projects.gnome.org/gedit/)
-or [VScode](https://code.visualstudio.com/). On Windows, you may wish to
-use [Notepad++](https://notepad-plus-plus.org/).  Windows also has a built-in
-editor called `notepad` that can be run from the command line in the same
-way as `nano` for the purposes of this lesson.
-
-No matter what editor you use, you will need to know where it searches
-for and saves files. If you start it from the shell, it will (probably)
-use your current working directory as its default location. If you use
-your computer's start menu, it may want to save files in your Desktop or
-Documents directory instead. You can change this by navigating to
-another directory the first time you 'Save As...'
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Let's type in a few lines of text.
 
@@ -216,27 +221,24 @@ the suggested default of `draft.txt`.
 Once our file is saved, we can use <kbd>Ctrl</kbd>\+<kbd>X</kbd> to quit the editor and
 return to the shell.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
 
-## Control, Ctrl, or ^ Key
-
-The Control key is also called the 'Ctrl' key. There are various ways
-in which using the Control key may be described. For example, you may
-see an instruction to press the <kbd>Control</kbd> key and, while holding it down,
-press the <kbd>X</kbd> key, described as any of:
-
-- `Control-X`
-- `Control+X`
-- `Ctrl-X`
-- `Ctrl+X`
-- `^X`
-- `C-x`
-
-In nano, along the bottom of the screen you'll see `^G Get Help ^O WriteOut`.
-This means that you can use `Control-G` to get help and `Control-O` to save your
-file.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
+> ## Control, Ctrl, or ^ Key
+>
+> The Control key is also called the 'Ctrl' key. There are various ways
+> in which using the Control key may be described. For example, you may
+> see an instruction to press the <kbd>Control</kbd> key and, while holding it down,
+> press the <kbd>X</kbd> key, described as any of:
+>
+> - `Control-X`
+> - `Control+X`
+> - `Ctrl-X`
+> - `Ctrl+X`
+> - `^X`
+> - `C-x`
+> 
+> In nano, along the bottom of the screen you'll see `^G Get Help ^O WriteOut`.
+> This means that you can use `Control-G` to get help and `Control-O` to save your file.
+{: .callout}
 
 `nano` doesn't leave any output on the screen after it exits,
 but `ls` now shows that we have created a file called `draft.txt`:
@@ -245,51 +247,47 @@ but `ls` now shows that we have created a file called `draft.txt`:
 $ ls
 ```
 
-```output
+```
 draft.txt
 ```
+{: .output}
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+## challenge 1
 
-## Creating Files a Different Way
-
-We have seen how to create text files using the `nano` editor.
-Now, try the following command:
-
-```bash
-$ touch my_file.txt
-```
-
-1. What did the `touch` command do?
-  When you look at your current directory using the GUI file explorer,
-  does the file show up?
-
-2. Use `ls -l` to inspect the files.  How large is `my_file.txt`?
-
-3. When might you want to create a file this way?
-
-:::::::::::::::  solution
-
-## Solution
-
-1. The `touch` command generates a new file called `my_file.txt` in
-  your current directory.  You
-  can observe this newly generated file by typing `ls` at the
-  command line prompt.  `my_file.txt` can also be viewed in your
-  GUI file explorer.
-
-2. When you inspect the file with `ls -l`, note that the size of
-  `my_file.txt` is 0 bytes.  In other words, it contains no data.
-  If you open `my_file.txt` using your text editor it is blank.
-
-3. Some programs do not generate output files themselves, but
-  instead require that empty files have already been generated.
-  When the program is run, it searches for an existing file to
-  populate with its output.  The touch command allows you to
-  efficiently generate a blank text file to be used by such
-  programs.
-
-:::::::::::::::::::::::::
+> ## Creating Files a Different Way
+>
+> We have seen how to create text files using the `nano` editor.
+> Now, try the following command:
+>
+> ```bash
+> $ touch my_file.txt
+> ```
+>
+> 1. What did the `touch` command do?
+> When you look at your current directory using the GUI file explorer,does the file show up?
+>
+> 2. Use `ls -l` to inspect the files.  How large is `my_file.txt`?
+> 
+> 3. When might you want to create a file this way?
+>
+> > ## Solution
+> >
+> > 1. The `touch` command generates a new file called `my_file.txt` in
+> > your current directory.  You can observe this newly generated file
+> > by typing `ls` at the command line prompt.  `my_file.txt` can also be viewed in your
+> >  GUI file explorer.
+> >
+> > 2. When you inspect the file with `ls -l`, note that the size of
+> > `my_file.txt` is 0 bytes.  In other words, it contains no data.
+> > If you open `my_file.txt` using your text editor it is blank.
+> >
+> > 3. Some programs do not generate output files themselves, but
+> > instead require that empty files have already been generated.
+> > When the program is run, it searches for an existing file to
+> > populate with its output.  The touch command allows you to
+> > efficiently generate a blank text file to be used by such programs.
+> {: .solution}
+{: .challenge}
 
 To avoid confusion later on,
 we suggest removing the file you've just created before proceeding with the rest
