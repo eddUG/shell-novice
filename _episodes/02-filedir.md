@@ -52,9 +52,10 @@ a command is important. `pwd` shows you where you are:
 $ pwd
 ```
 
-```output
+```
 /home/elukyamuzi
 ```
+{: .output}
 
 Here, the computer's response is `/home/elukyamuzi`, which is elukyamuzi's **home directory**:
 
@@ -138,10 +139,11 @@ own filesystem.  We can see what's in our home directory by running `ls`:
 $ ls
 ```
 
-```output
+```
 Applications Documents    Library      Music        Public
 Desktop      Downloads    Movies       Pictures
 ```
+{: .output}
 
 (Again, your results may be slightly different depending on your operating
 system and how you have customized your filesystem.)
@@ -163,10 +165,11 @@ directory.
 $ ls -F
 ```
 
-```output
+```
 Applications/ Documents/    Library/      Music/        Public/
 Desktop/      Downloads/    Movies/       Pictures/
 ```
+{: .output}
 
 Here,
 we can see that the home directory contains only **sub-directories**.
@@ -263,15 +266,16 @@ Mandatory arguments to long options are mandatory for short options, too.
 >
 > If you try to use an option that is not supported, `ls` and other commands
 > will usually print an error message similar to:
-> 
-```bash
-$ ls -j
-```
-
-```error
-ls: invalid option -- 'j'
-Try 'ls --help' for more information.
-```
+>
+> ```bash
+> $ ls -j
+> ```
+>
+> ```
+> Applications/ Documents/    Library/      Music/        Public/
+> Desktop/      Downloads/    Movies/       Pictures/
+> ```
+> {: .error}
 {: .callout}
 
 
@@ -365,9 +369,11 @@ we want a listing of something other than our current working directory:
 $ ls -F Desktop
 ```
 
-```output
+```
 shell-lesson-data/
 ```
+{: .output}
+
 
 Note that if a directory named `Desktop` does not exist in your current working directory,
 this command will return an error. Typically, a `Desktop` directory exists in your
@@ -394,9 +400,11 @@ a directory name to `ls`:
 $ ls -F shell-lesson-data
 ```
 
-```output
+```
 exercise-data/  north-pacific-gyre/
 ```
+{: .output}
+
 
 Second, we can actually change our location to a different directory, so
 we are no longer located in
@@ -435,17 +443,19 @@ because that's where we now are:
 $ pwd
 ```
 
-```output
+```
 /home/elukyamuzi/shell-lesson-data/exercise-data
 ```
+{: .output}
 
 ```bash
 $ ls -F
 ```
 
-```output
+```
 alkanes/  animal-counts/  creatures/  numbers.txt  writing/
 ```
+{: .output}
 
 We now know how to go down the directory tree (i.e. how to go into a subdirectory),
 but how do we go up (i.e. how do we leave a directory and go into its parent directory)?
@@ -455,9 +465,10 @@ We might try the following:
 $ cd shell-lesson-data
 ```
 
-```error
+```
 -bash: cd: shell-lesson-data: No such file or directory
 ```
+{: .error}
 
 But we get an error! Why is this?
 
@@ -483,9 +494,10 @@ if we run `pwd` after running `cd ..`, we're back in `/home/elukyamuzi/shell-les
 $ pwd
 ```
 
-```output
+```
 /home/elukyamuzi/shell-lesson-data
 ```
+{: .output}
 
 The special directory `..` doesn't usually show up when we run `ls`. If we want
 to display it, we can add the `-a` option to `ls -F`:
@@ -494,9 +506,11 @@ to display it, we can add the `-a` option to `ls -F`:
 $ ls -F -a
 ```
 
-```output
+```
 ./  ../  exercise-data/  north-pacific-gyre/
 ```
+{: .output}
+
 
 `-a` stands for 'show all' (including hidden files);
 it forces `ls` to show us file and directory names that begin with `.`,
@@ -538,9 +552,10 @@ How can you check what happened? `pwd` gives us the answer!
 $ pwd
 ```
 
-```output
+```
 /home/elukyamuzi
 ```
+{: .output}
 
 It turns out that `cd` without an argument will return you to your home directory,
 which is great if you've got lost in your own filesystem.
@@ -579,9 +594,10 @@ to move to `shell-lesson-data`.
 $ pwd
 ```
 
-```output
+```
 /home/elukyamuzi/shell-lesson-data/exercise-data
 ```
+{: .output}
 
 ```bash
 $ cd /home/elukyamuzi/shell-lesson-data
@@ -607,20 +623,17 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > that the former brings you *up*, while the latter brings you *back*.
 >
 > Try it! First navigate to `~/shell-lesson-data` (you should already be there).
-
-```bash
-$ cd ~/shell-lesson-data
-```
+> ```bash
+> $ cd ~/shell-lesson-data
+> ```
 > Then `cd` into the `exercise-data/creatures` directory
-
-```bash
-$ cd exercise-data/creatures
-```
+> ```bash
+> $ cd exercise-data/creatures
+> ```
 > Now if you run
-
-```bash
-$ cd -
-```
+> ```bash
+> $ cd -
+> ```
 {: .callout}
 
 you'll see you're back in `~/shell-lesson-data`.
@@ -692,9 +705,10 @@ Run `cd -` again and you're back in `~/shell-lesson-data/exercise-data/creatures
 > and `-r` tells `ls` to display things in reverse order,
 > what command(s) will result in the following output:
 >
-> ```output
+> ```
 > pnas_sub/ pnas_final/ original/
 > ```
+{: .output}
 > 
 > ![](fig/filesystem-challenge.svg){alt='A directory tree below the Users directory where "/home" contains the directories "backup" and "thing"; "/home/backup" contains "original","pnas\_final" and "pnas\_sub"; "/home/thing" contains "backup"; and"/home/thing/backup" contains "2012-12-01", "2013-01-08" and"2013-01-27"'}
 >
@@ -750,10 +764,12 @@ $ cd ~shell-lesson-data
 $ ls -s exercise-data
 ```
 
-```output
+```
 total 28
  4 animal-counts   4 creatures  12 numbers.txt   4 alkanes   4 writing
 ```
+{: .output}
+
 
 Note that the sizes returned by `ls -s` are in *blocks*.
 As these are defined differently for different operating systems,
@@ -763,9 +779,11 @@ you may not obtain the same figures as in the example.
 $ ls -S exercise-data
 ```
 
-```output
+```
 animal-counts  creatures  alkanes  writing  numbers.txt
 ```
+{: .output}
+
 
 Putting all that together, our command `ls -F /` above gives us a listing
 of files and directories in the root directory `/`.
@@ -775,11 +793,13 @@ An example of the output you might get from the above command is given below:
 $ ls -F /
 ```
 
-```output
+```
 Applications/         System/
 Library/              Users/
 Network/              Volumes/
 ```
+{: .output}
+
 
 ### Nelle's Pipeline: Organizing Files
 
