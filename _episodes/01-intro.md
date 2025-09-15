@@ -51,7 +51,7 @@ $ ls
 ```
 
 ```output
-entomology-shell-lesson-data
+shell-lesson-data
 ```
 
 If the shell can’t find a program whose name is the command you typed, it will print an error message such as:
