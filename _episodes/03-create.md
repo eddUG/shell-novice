@@ -10,11 +10,16 @@ objectives:
 - "Create files in that hierarchy using an editor or by copying and renaming existing files."
 - "Create a directory hierarchy that matches a given diagram."
 keypoints:
-- "A shell is a program whose primary purpose is to read commands and run other programs."
-- "This lesson uses Bash, the default shell in many implementations of Unix."
-- "Programs can be run in Bash by entering commands at the command-line prompt."
-- "The shell’s main advantages are its high action-to-keystroke ratio, its support for automating repetitive tasks, and its capacity to access networked machines."
-- "A significant challenge when using the shell can be knowing what commands need to be run and how to run them."
+- "`cp [old] [new]` copies a file."
+- "`mkdir [path]` creates a new directory."
+- "`mv [old] [new]` moves (renames) a file or directory."
+- "`rm [path]` removes (deletes) a file."
+- "`*` matches zero or more characters in a filename, so `*.txt` matches all files ending in `.txt`."
+- "`?` matches any single character in a filename, so `?.txt` matches `a.txt` but not `any.txt`."
+- "Use of the Control key may be described in many ways, including `Ctrl-X`, `Control-X`, and `^X`."
+- "The shell does not have a trash bin: once something is deleted, it's really gone."
+- "Most files' names are `something.extension`. The extension isn't required, and doesn't guarantee anything, but is normally used to indicate the type of data in the file."
+- "Depending on the type of work you do, you may need a more powerful text editor than Nano."
 ---
 
 ## Creating directories
@@ -298,10 +303,6 @@ To do this, use the following command:
 $ rm my_file.txt
 ```
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::  callout
-
 ## What's In A Name?
 
 You may have noticed that all of Nelle's files are named 'something dot
@@ -327,7 +328,6 @@ program. In this case, if someone double-clicked `whale.mp3` in a file
 explorer program, the music player will automatically (and erroneously)
 attempt to open the `whale.mp3` file.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Moving files and directories
 
@@ -417,7 +417,7 @@ $ ls quotes.txt
 quotes.txt
 ```
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+## challenge 1
 
 ## Moving Files to a new folder
 
@@ -440,8 +440,6 @@ Fill in the blanks to move these files to the `raw/` folder
 $ mv sucrose.dat maltose.dat ____/____
 ```
 
-:::::::::::::::  solution
-
 ## Solution
 
 ```bash
@@ -450,10 +448,6 @@ $ mv sucrose.dat maltose.dat ../raw
 
 Recall that `..` refers to the parent directory (i.e. one above the current directory)
 and that `.` refers to the current directory.
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Copying files and directories
 
@@ -505,8 +499,7 @@ $ cp thesis thesis_backup
 cp: -r not specified; omitting directory 'thesis'
 ```
 
-
-:::::::::::::::::::::::::::::::::::::::  challenge
+## challenge 2
 
 ## Renaming Files
 
@@ -521,8 +514,6 @@ correct the mistake, which of the following commands could you use to do so?
 3. `mv statstics.txt .`
 4. `cp statstics.txt .`
 
-:::::::::::::::  solution
-
 ## Solution
 
 1. No.  While this would create a file with the correct name,
@@ -535,11 +526,7 @@ correct the mistake, which of the following commands could you use to do so?
 4. No, the period(.) indicates where to copy the file, but does not provide a new file name;
   identical file names cannot be created.
 
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
+## challenge 3
 
 ## Moving and Copying
 
@@ -573,8 +560,6 @@ $ ls
 3. `proteins.dat recombined`
 4. `proteins-saved.dat`
 
-:::::::::::::::  solution
-
 ## Solution
 
 We start in the `/home/elukyamuzi/data` directory, and create a new folder called `recombined`.
@@ -591,9 +576,6 @@ So, the only thing that will show using ls (in `/home/elukyamuzi/data`) is the r
 3. No, see explanation above.  `proteins.dat` is located at `/home/elukyamuzi/data/recombined`
 4. No, see explanation above.  `proteins-saved.dat` is located at `/home/elukyamuzi`
 
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Removing files and directories
 
@@ -615,8 +597,6 @@ $ ls quotes.txt
 ls: cannot access 'quotes.txt': No such file or directory
 ```
 
-:::::::::::::::::::::::::::::::::::::::::  callout
-
 ## Deleting Is Forever
 
 The Unix shell doesn't have a trash bin that we can recover deleted
@@ -627,16 +607,12 @@ recovering deleted files do exist, but there's no guarantee they'll
 work in any particular situation, since the computer may recycle the
 file's disk space right away.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
+## challenge 4
 
 ## Using `rm` Safely
 
 What happens when we execute `rm -i thesis_backup/quotations.txt`?
 Why would we want this protection when using `rm`?
-
-:::::::::::::::  solution
 
 ## Solution
 
@@ -650,9 +626,6 @@ The Unix shell doesn't have a trash bin, so all the files removed will disappear
 By using the `-i` option, we have the chance to check that we are deleting only the files
 that we want to remove.
 
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 If we try to remove the `thesis` directory using `rm thesis`,
 we get an error message:
@@ -686,7 +659,7 @@ or specifying a naming pattern using wildcards. Wildcards are
 special characters that can be used to represent unknown characters
 or sets of characters when navigating the Unix file system.
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+## challenge 5
 
 ## Copy with Multiple Filenames
 
@@ -706,15 +679,14 @@ $ cd creatures
 $ ls -F
 ```
 
-```output
+```
 basilisk.dat  minotaur.dat  unicorn.dat
 ```
+{: .output}
 
 ```bash
 $ cp minotaur.dat unicorn.dat basilisk.dat
 ```
-
-:::::::::::::::  solution
 
 ## Solution
 
@@ -725,17 +697,12 @@ If given more than one file name followed by a directory name
 If given three file names, `cp` throws an error such as the one below,
 because it is expecting a directory name as the last argument.
 
-```error
+```
 cp: target 'basilisk.dat' is not a directory
 ```
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
+{: .error}
 
 ### Using wildcards for accessing multiple files at once
-
-:::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Wildcards
 
@@ -765,10 +732,8 @@ However, generally commands like `wc` and `ls` see the lists of
 file names matching these expressions, but not the wildcards
 themselves. It is the shell, not the other programs, that expands
 the wildcards.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
+ 
+ ## challenge 6
 
 ## List filenames matching a pattern
 
@@ -781,8 +746,6 @@ produce this output?
 2. `ls *t?ne.*`
 3. `ls *t??ne.pdb`
 4. `ls ethane.*`
-
-:::::::::::::::  solution
 
 ## Solution
 
@@ -804,11 +767,7 @@ This is the solution.
 
 `4.` only shows files starting with `ethane.`.
 
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
+## challenge 7
 
 ## More on Wildcards
 
@@ -896,8 +855,6 @@ The resulting directory structure should look like this
         └── 2015-11-23-dataset_overview.txt
 ```
 
-:::::::::::::::  solution
-
 ## Solution
 
 ```bash
@@ -905,12 +862,8 @@ $ cp *calibration.txt backup/calibration
 $ cp 2015-11-* send_to_bob/all_november_files/
 $ cp *-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/
 ```
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
+ 
+## challenge 8
 
 ## Organizing Directories and Files
 
@@ -921,9 +874,10 @@ organized:
 $ ls -F
 ```
 
-```output
+```
 analyzed/  fructose.dat    raw/   sucrose.dat
 ```
+{: .output}
 
 The `fructose.dat` and `sucrose.dat` files contain output from her data
 analysis. What command(s) covered in this lesson does she need to run
@@ -933,19 +887,19 @@ so that the commands below will produce the output shown?
 $ ls -F
 ```
 
-```output
+```
 analyzed/   raw/
 ```
+{: .output}
 
 ```bash
 $ ls analyzed
 ```
 
-```output
+```
 fructose.dat    sucrose.dat
 ```
-
-:::::::::::::::  solution
+{: .output}
 
 ## Solution
 
@@ -957,11 +911,8 @@ Jamie needs to move her files `fructose.dat` and `sucrose.dat` to the `analyzed`
 The shell will expand \*.dat to match all .dat files in the current directory.
 The `mv` command then moves the list of .dat files to the 'analyzed' directory.
 
-:::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
+## challenge 9
 
 ## Reproduce a folder structure
 
@@ -1016,8 +967,6 @@ $ mkdir data
 $ mkdir raw processed
 ```
 
-:::::::::::::::  solution
-
 ## Solution
 
 The first two sets of commands achieve this objective.
@@ -1034,22 +983,3 @@ directories, will cause `mkdir` to create any intermediate subdirectories as req
 
 The final set of commands generates the 'raw' and 'processed' directories at the same level
 as the 'data' directory.
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::: keypoints
-
-- `cp [old] [new]` copies a file.
-- `mkdir [path]` creates a new directory.
-- `mv [old] [new]` moves (renames) a file or directory.
-- `rm [path]` removes (deletes) a file.
-- `*` matches zero or more characters in a filename, so `*.txt` matches all files ending in `.txt`.
-- `?` matches any single character in a filename, so `?.txt` matches `a.txt` but not `any.txt`.
-- Use of the Control key may be described in many ways, including `Ctrl-X`, `Control-X`, and `^X`.
-- The shell does not have a trash bin: once something is deleted, it's really gone.
-- Most files' names are `something.extension`. The extension isn't required, and doesn't guarantee anything, but is normally used to indicate the type of data in the file.
-- Depending on the type of work you do, you may need a more powerful text editor than Nano.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
