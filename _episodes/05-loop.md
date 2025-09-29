@@ -773,5 +773,5 @@ There are a number of other shortcut commands for getting at the history.
 > > temperatures, and creates a new directory for each combination.
 > >
 > > Try running the code for yourself to see which directories are created!
-{: .solution}
+> {: .solution}
 {: .challenge}
