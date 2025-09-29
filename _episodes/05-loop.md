@@ -435,10 +435,11 @@ from whatever file is being processed
 > to find them; however, the error message returned will show the name of the files it is
 > expecting:
 >
-> ```error
+> ```
 > head: cannot open ‘red dragon.dat' for reading: No such file or directory
 > head: cannot open ‘purple unicorn.dat' for reading: No such file or directory
 > ```
+> {: .error}
 >
 > Try removing the quotes around `$filename` in the loop above to see the effect of the quote
 > marks on spaces. Note that we get a result from the loop command for unicorn.dat
@@ -472,9 +473,10 @@ $ cp basilisk.dat minotaur.dat unicorn.dat original-*.dat
 
 This wouldn't back up our files, instead we get an error:
 
-```error
+```
 cp: target `original-*.dat' is not a directory
 ```
+{: .error}
 
 This problem arises when `cp` receives more than two inputs. When this happens, it expects the
 last input to be a directory where it can copy all the files it was passed. Since there is
