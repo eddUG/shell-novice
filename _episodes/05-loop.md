@@ -435,7 +435,7 @@ from whatever file is being processed
 > to find them; however, the error message returned will show the name of the files it is
 > expecting:
 >
-> ```error
+> ```
 > head: cannot open ‘red dragon.dat' for reading: No such file or directory
 > head: cannot open ‘purple unicorn.dat' for reading: No such file or directory
 > ```
