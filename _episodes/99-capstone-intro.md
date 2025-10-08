@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Capstone: mini-analysis pipeline"
-instruction: 10
-exercises: 50
+teaching: 10
+exercises: 5*60
 questions:
 - "How can the Unix shell support a small but realistic bioinformatics workflow?"
 - "How can we organize, inspect, summarize, and automate a small genomics project using just the shell?"
@@ -52,14 +52,17 @@ Over the capstone, you’ll step into Mariam’s role. You’ll organize a small
 {: .callout}
 
 Jump to:
-- **Day 1:** [Setup & Orientation]({{ page.root }}/99-capstone-day1/)
-- **Day 1:** [Setup & Orientation]({{ '/99-capstone-day1/' | relative_url }})
+- **session 1:** [Setup & Orientation]({{ page.root }}/capstone-session1/)
+- **session II:** [metadata summaries]({{ page.root }}/capstone-session2/)
+- **session III:** [variant summaries]({{ page.root }}/capstone-session3/)
+- **session IV:** [windows & genotype snapshot]({{ page.root }}/capstone-session4/)
+- **session V:** [automate, package, reflect]({{ page.root }}/capstone-session5/)
 
-Jump to: [Day 1](#day-1-setup--orientation) > [Day 2](#day-2-metadata-summaries) > [Day 3](#day-3-variant-summaries) > [Day 4](#day-4-windows--genotype-snapshot) > [Day 5](#day-5-automate-package-reflect)
 
 > ## Tips for staying on course
 > - **Plan first, then type.** Write your pipeline in plain language before converting it to commands.
 > - **Prefer small steps.** Test each pipe segment on `head` output.
 > - **Log as you go.** Anything not captured in `results/` or `logs/` is easy to lose.
 {: .callout}
+
 
