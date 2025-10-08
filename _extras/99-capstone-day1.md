@@ -1,3 +1,8 @@
+---
+layout: page
+title: Day 1 — Setup & Orientation
+---
+
 ## Day 1 — Setup & Orientation
 
 **Narrative.** Mariam refuses “mystery data.” She first verifies what she has, where it is and records this in a log.
