@@ -45,7 +45,7 @@ Over the capstone, you’ll step into Mariam’s role. You’ll organize a small
 
 
 > ## Data bundle
-> - **Download:** [Anopheles data bundle]({% link data/ag-bundle.zip %})
+> - **Download:** [Anopheles data bundle](data/ag-bundle.zip)
 > - Unzip into `data/` so you have:
 >   - `data/variants_subset.vcf.gz`
 >   - `data/samples.tsv`
@@ -53,7 +53,7 @@ Over the capstone, you’ll step into Mariam’s role. You’ll organize a small
 {: .callout}
 
 Jump to:
-- **Day 1:** [Setup & Orientation]({% link _extras/99-capstone-day1.md %}) {% link _extras/capstone-day1.md %}
+- **Day 1:** [Setup & Orientation](_extras/99-capstone-day1.md) [Guide](guide/) [data/](data/entomology-shell-lesson-data.zip).
 
 Jump to: [Day 1](#day-1-setup--orientation) > [Day 2](#day-2-metadata-summaries) > [Day 3](#day-3-variant-summaries) > [Day 4](#day-4-windows--genotype-snapshot) > [Day 5](#day-5-automate-package-reflect)
 
