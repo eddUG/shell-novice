@@ -55,7 +55,7 @@ Before you jump to the mini project, it might be helpful to warm up with some pr
 ## Practice Exercises
 - [Files & Navigation]({{ page.root }}/exercises1-files/)
 - [Pipes, Filters & Redirection]]({{ page.root }}/exercises2-pipes/)
-- [FASTQ Essentials]({{ page.root }}/exercises3-fastq/)
+- [Text processing]({{ page.root }}/exercises3-processing/)
 - [Loops]({{ page.root }}/exercises5-loops/)
 
 Jump to:
