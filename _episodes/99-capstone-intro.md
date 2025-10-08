@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Capstone: mini-analysis pipeline"
 teaching: 10
 exercises: 5*60
@@ -51,13 +50,14 @@ Over the capstone, you’ll step into Mariam’s role. You’ll organize a small
 >   - `data/regions.bed`
 {: .callout}
 
-Before you jump to the mini project, it might be helpful to warm up with some practice exercises:
-## Practice Exercises
+Before you jump to the mini project, it might be helpful to warm up to some practice exercises:
+### Practice Exercises
 - [Files & Navigation]({{ page.root }}/exercises1-files/)
-- [Pipes, Filters & Redirection]]({{ page.root }}/exercises2-pipes/)
+- [Pipes, Filters & Redirection]({{ page.root }}/exercises2-pipes/)
 - [Text processing]({{ page.root }}/exercises3-processing/)
 - [Loops]({{ page.root }}/exercises5-loops/)
 
+### Capstone sessions
 Jump to:
 - **session 1:** [Setup & Orientation]({{ page.root }}/capstone-session1/)
 - **session II:** [metadata summaries]({{ page.root }}/capstone-session2/)
