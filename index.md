@@ -38,8 +38,8 @@ By the end of the workshop, learners will be able to:
 >
 > If you are teaching this lesson in a workshop, please see the [Guide](guide/).
 > ## Practice Exercises
-> - [Files & Navigation (AG1000G Mini)]({% link _extras/exercises1-files.md %})
-> - [Pipes, Filters & Redirection (AG1000G Mini)]({% link _extras/exercises2-pipes.md %})
-> - [FASTQ Essentials (Self-contained)]({% link _extras/exercises3-fastq.md %})
-> - [More Loops (Batching & Checks)]({% link _extras/exercises5-loops.md %})
+> - [Files & Navigation (AG1000G Mini)]({% link {{ page.root }}/_extras/exercises1-files.md %})
+> - [Pipes, Filters & Redirection (AG1000G Mini)]({% link {{ page.root }}/_extras/exercises2-pipes.md %})
+> - [FASTQ Essentials (Self-contained)]({% link {{ page.root }}/_extras/exercises3-fastq.md %})
+> - [More Loops (Batching & Checks)]({% link {{ page.root }}/_extras/exercises5-loops.md %})
 {: .callout}
