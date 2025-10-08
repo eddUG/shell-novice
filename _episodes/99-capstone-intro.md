@@ -1,4 +1,5 @@
 ---
+layout: page
 title: "Capstone: mini-analysis pipeline"
 instruction: 10
 exercises: 50
@@ -51,7 +52,8 @@ Over the capstone, you’ll step into Mariam’s role. You’ll organize a small
 {: .callout}
 
 Jump to:
-- **Day 1:** [Setup & Orientation]({{page.root}}/_extras/99-capstone-day1.md) {% link {{page.root}}/_extras/99-capstone-day1.md %}
+- **Day 1:** [Setup & Orientation]
+- **Day 1:** [Setup & Orientation]({{ '/99-capstone-day1/'}})
 
 Jump to: [Day 1](#day-1-setup--orientation) > [Day 2](#day-2-metadata-summaries) > [Day 3](#day-3-variant-summaries) > [Day 4](#day-4-windows--genotype-snapshot) > [Day 5](#day-5-automate-package-reflect)
 
