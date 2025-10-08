@@ -53,13 +53,6 @@ Place these files under `data/`:
 ### Project structure
 
 We will use the following layout:
->```
-> ag1000g-mini/
-> ├── data/ # input files (read-only)
-> ├── results/ # derived outputs (created during the capstone)
-> ├── scripts/ # your shell scripts
-> └── logs/ # run logs and notes
->```
 
 ```bash
 ag1000g-mini/
