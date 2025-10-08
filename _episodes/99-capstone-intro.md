@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Capstone: mini-analysis pipeline"
 instruction: 10
 exercises: 50
