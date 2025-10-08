@@ -1,4 +1,4 @@
-# Shell Novice for Entomologists (Carpentries styles)
+# Shell for begineers (Carpentries styles)
 
 This repository uses the Carpentries "styles" template to publish a lesson.
 
