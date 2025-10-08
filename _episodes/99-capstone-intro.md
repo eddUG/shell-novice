@@ -1,5 +1,7 @@
 ---
 title: "Capstone — Mini-analysis Pipeline"
+instruction: 10
+exercises: 50
 questions:
 - "How can the Unix shell support a small but realistic bioinformatics workflow?"
 - "How can we organize, inspect, summarize, and automate a small genomics project using just the shell?"
