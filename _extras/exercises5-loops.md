@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Practice: More Loops (Batching & Checks)"
+title: "Practice: Loops"
 ---
 
 Use `data/` files to practice robust loops that create tidy outputs in `results/`.
