@@ -13,7 +13,6 @@ keypoints:
 - "We will use only core Unix tools (no bioinformatics software installs)."
 - "You’ll build a small, reproducible workflow over five one-hour sessions."
 - "Results, scripts, and logs will document exactly what you did."
-layout: episode
 ---
 
 ## Motivation
