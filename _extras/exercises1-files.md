@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Practice: Files & Navigation (AG1000G Mini)"
+title: "Files & Navigation"
 ---
 
 These warm-ups build muscle memory for paths, safe file ops, and project hygiene.  
