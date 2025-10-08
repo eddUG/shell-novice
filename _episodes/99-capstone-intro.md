@@ -43,7 +43,7 @@ Over the capstone, you’ll step into Mariam’s role. You’ll organize a small
 
 
 > ## Data bundle
-> - **Download:** [Anopheles data bundle]({{ page.root }}/data/ag-bundle.zip)
+> - **Download:** [Anopheles data bundle]({{ page.root }}/data/ag1000g-mini.zip)
 > - Unzip into `data/` so you have:
 >   - `data/variants_subset.vcf.gz`
 >   - `data/samples.tsv`
