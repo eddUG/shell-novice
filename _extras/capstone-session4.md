@@ -15,7 +15,3 @@ Windows locate concentration; a genotype snapshot links biology to metadata.
 > - `results/first_variant_gts.txt`  
 > - `results/first_variant_carriers_by_population.txt`
 {: .callout}
-
-> ### Solution (collapsed)
-> Instructors: include reference loops and `awk` predicates here.
-{: .solution}
