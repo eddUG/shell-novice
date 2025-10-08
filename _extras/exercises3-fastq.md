@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Practice: FASTQ Essentials (Self-contained)"
+title: "Practice: Text processing"
 ---
 
 We’ll create a tiny FASTQ and practice safe text processing. No external downloads.
