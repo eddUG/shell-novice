@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Practice: Pipes, Filters & Redirection (AG1000G Mini)"
+title: "Practice: Pipes, Filters & Redirection"
 ---
 
 Use **only** local files in `data//`. No internet/dependencies.
