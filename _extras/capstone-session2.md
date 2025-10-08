@@ -19,8 +19,3 @@ Before touching variants, Mariam needs context: how many samples per species, po
 > - `results/sample_to_pop.tsv`, `results/vcf_sample_order.txt`
 {: .callout}
 
-> ### Solution (collapsed)
-> Instructors: place the reference pipelines here.
-{: .solution}
-
----
