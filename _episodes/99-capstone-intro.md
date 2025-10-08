@@ -15,13 +15,13 @@ keypoints:
 - "Results, scripts, and logs will document exactly what you did."
 ---
 
-## Motivation
+### Motivation
 
 You’ve practiced navigation, pipes & filters, loops, and shell scripts. This **capstone** pulls those skills together on a **tiny, AG1000G-style** dataset to model a realistic genomics task while keeping runtime and complexity low.
 
 We will **lean on core shell utilities** to organize a project, inspect data, summarize variants and metadata, automate steps, and record what we did so the work is **repeatable and auditable**.
 
-## What we will build (big picture)
+### What we will build (big picture)
 
 Over five days (≈1 hour/day), you will:
 
@@ -34,13 +34,13 @@ Over five days (≈1 hour/day), you will:
 All outputs land in `results/`, and your commands are captured in `logs/`.  
 The final script `scripts/run_all.sh` recreates the analysis end-to-end.
 
-## Prerequisites
+### Prerequisites
 
 - Completed the **Unix shell** episodes: navigation, globbing, pipes & filters, loops, simple scripts.
 - Comfortable running commands like `grep`, `cut`, `sort`, `uniq`, `awk`, `wc`, `head`, `tail`, `less`, `find`, `xargs`, and using `|`, `>`, `>>`.
 - You have the practice data unzipped and can `cd` into the project root.
 
-## Data (small AG1000G bundle)
+### Data (small AG1000G bundle)
 
 Place these files under `data/`:
 
@@ -50,9 +50,24 @@ Place these files under `data/`:
 
 > The dataset is synthetic and intentionally tiny so commands run instantly on any laptop.
 
-## Project structure
+### Project structure
 
 We will use the following layout:
+>```bash
+> ag1000g-mini/
+> ├── data/ # input files (read-only)
+> ├── results/ # derived outputs (created during the capstone)
+> ├── scripts/ # your shell scripts
+> └── logs/ # run logs and notes
+>```
+
+```bash
+ag1000g-mini/
+├── data/ # input files (read-only)
+├── results/ # derived outputs (created during the capstone)
+├── scripts/ # your shell scripts
+└── logs/ # run logs and notes
+```
 
 ag1000g-mini/
 ├── data/ # input files (read-only)
