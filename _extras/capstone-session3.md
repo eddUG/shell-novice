@@ -3,8 +3,7 @@ layout: page
 title: session 3 — summaries of variants 
 ---
 
-> Big-picture numbers help spot issues early.
-{: .callout}
+Big-picture numbers help spot issues early.
 
 **Assignment**
 1. Which one-liner gives the **number of PASS variants** (column 7 equals `PASS`)?
@@ -19,8 +18,3 @@ title: session 3 — summaries of variants
 > - A brief count in `logs/day3.log` stating total PASS variants
 {: .callout}
 
-> ### Solution (collapsed)
-> Instructors: include your exemplar commands here.
-{: .solution}
-
----
