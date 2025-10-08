@@ -16,7 +16,3 @@ Mariam refuses “mystery data.” She first verifies what she has, where it is 
 > - `logs/day1.log` with sizes, peeks, and counts you ran.
 > - Confirmed folder structure.
 {: .callout}
-
-> ### Solution (collapsed)
-> Instructors: include your reference commands here using Carpentries’ `.solution` block.
-{: .solution}
