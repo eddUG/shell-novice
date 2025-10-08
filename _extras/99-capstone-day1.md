@@ -1,12 +1,11 @@
 ---
 layout: page
+title: session 1 — Setup and Orientation
 ---
 
-### session 1 — Setup & Orientation
+Mariam refuses “mystery data.” She first verifies what she has, where it is and records this in a log.
 
-**Narrative.** Mariam refuses “mystery data.” She first verifies what she has, where it is and records this in a log.
-
-**Guiding prompts (answer with shell commands):**
+**Assignment (answer with shell commands):**
 1. How will you **create** the project subfolders (`results/`, `scripts/`, `logs/`) if they don’t exist?
 2. How will you **start a day log** that includes the current date/time?
 3. Which command(s) let you **list file sizes** in `data/` and **append** that listing to your log?
