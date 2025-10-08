@@ -50,8 +50,9 @@ Over the capstone, you’ll step into Mariam’s role. You’ll organize a small
 
 Jump to: [Day 1](#day-1-setup--orientation) > [Day 2](#day-2-metadata-summaries) > [Day 3](#day-3-variant-summaries) > [Day 4](#day-4-windows--genotype-snapshot) > [Day 5](#day-5-automate-package-reflect)
 
-## Tips for staying on course
-- **Plan first, then type.** Write your pipeline in plain language before converting it to commands.
-- **Prefer small steps.** Test each pipe segment on `head` output.
-- **Log as you go.** Anything not captured in `results/` or `logs/` is easy to lose.
+> ## Tips for staying on course
+> - **Plan first, then type.** Write your pipeline in plain language before converting it to commands.
+> - **Prefer small steps.** Test each pipe segment on `head` output.
+> - **Log as you go.** Anything not captured in `results/` or `logs/` is easy to lose.
+{: .callout}
 
