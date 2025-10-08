@@ -14,7 +14,7 @@ keypoints:
 ---
 
 > ## Data bundle
-> - **Download:** [AG1000G Toy Bundle]({% link data/ag1000g-toy-bundle.zip %})
+> - **Download:** [Anopheles data bundle]({% link data/ag-bundle.zip %})
 > - Unzip into `data/` so you have:
 >   - `data/variants_subset.vcf.gz`
 >   - `data/samples.tsv`
